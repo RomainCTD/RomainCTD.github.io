@@ -1051,7 +1051,6 @@ blockquote {
         display: inline-block;
 
         /* dimensions: cut off images */
-        overflow: auto;
         padding: 25px 0;
         border-bottom: 25px solid transparent;
 

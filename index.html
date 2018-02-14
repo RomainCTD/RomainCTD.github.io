@@ -115,7 +115,7 @@
             <div class="col-38">
 
                 <div class="section-heading">
-                    <h1>ROMAIN</h1>
+                    <h1 id="titre1">ROMAIN</h1>
                 </div>
             </div>
 
@@ -147,14 +147,15 @@
 <hr>
 
         <!--Gallery-->
-        <aside id="gallery" class="row text-center scrollto clearfix">
+        <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
+ 
+                <a href="images/sibpage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/sib.png" alt="SoundsInBordeaux"/></a>
 
-                <a href="http://www.soundsinbordeaux.com" target="_blank" class="col-3 wow fadeIn"><img src="images/sib.png" href="" alt="SoundsInBordeaux"/></a>
+                <a href="images/FairGamepage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/FairGame.png" alt="FairGame"/></a>
 
-                <a class="col-3 wow fadeIn"><img src="images/fairgame.png" alt="FairGame"/></a>
+                <a href="images/Spinkoppage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/Spinkop.png" alt="Spinkop"/></a>
 
-                <a class="col-3 wow fadeIn"><img src="images/spinkop.png" alt="Spinkop"/></a>
-            
+                <a href="images/gscpage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/gsc.png" alt="GSC"/></a>
         </aside>
         <!--End of Gallery-->
 
@@ -171,7 +172,13 @@
     <!--End of Footer-->
 
 </div>
-
+<script type="text/javascript">
+    
+var $changement = $('#titre1');
+$(document).scroll(function() {
+    $changement.css({letter-spacing: $(this).scrollTop() > 100? "letter-spacing:":"10"});
+});
+</script>
 <!-- Include JavaScript resources -->
 <script src="js/jquery.1.8.3.min.js"></script>
 <script src="js/wow.min.js"></script>

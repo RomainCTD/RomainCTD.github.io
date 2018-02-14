@@ -170,6 +170,10 @@ body {
     color:#111;
 }
 
+#titre1 {
+    letter-spacing: 1px;
+}
+
 #banner h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:18px;
