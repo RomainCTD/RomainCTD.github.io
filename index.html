@@ -136,7 +136,6 @@
         
         <button id="vidpause" onclick="javascript:document.getElementById('vidpause').className='vidactif';">PLAY</button>
 
-<h2 class="desc"> Simple, rapide, rythmé ? Découvrez-moi à travers un court teaser</h2>
 
 
             </div>
@@ -144,19 +143,33 @@
 
         </section>
         <!--End of Introduction-->
-<hr>
+
 
         <!--Gallery-->
-        <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
- 
-                <a href="images/sibpage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/sib.png" alt="SoundsInBordeaux"/></a>
+    <section id="gallery" class="gallery scrollto">
+    <div class="container">
+      <div class="filter">
+        <h1>Mes projets</h1>
+        <button data-name='*' class="btn btn-info active">Tous</button>
+        <button data-name=".design" class="btn btn-primary">Design</button>
+        <button data-name=".dev" class="btn btn-danger">Développement</button>
+        <button data-name=".other" class="btn btn-success">Autres</button>
+      </div>
+      <div class="grid">
+        <div class="grid-item dev design">Sounds In Bordeaux<img src="images/sib.png" alt"SoundsInBordeaux"></img></div>
+        <div class="grid-item dev">Projet FairGame<img src="images/fairgame.png" alt"FairGame"></img></div>
+        <div class="grid-item dev design">Création de Spinkop<img src="images/spinkop.png" alt"Spinkop"></img></div>
+        <div class="grid-item design">Création événementielle<img src="images/gsc.png" alt"GamingSchoolCup"></img></div>
+        <div class="grid-item design">Création de divers logo<img src="images/stickpower.png" alt"StickPower"></img></div>
+        <div class="grid-item other">Création d'un jeu vidéo<img src="images/ksp.png" alt"KSP"></img></div>
+        <div class="grid-item dev">Extension Google Chrome<img src="images/useL.png" alt"SoundsInBordeaux"></img></div>
+        <div class="grid-item other">Court métrage audiovisuel<img src="images/movie.png" alt"WhenLifeMeetsDeath"></img></div>
+        <div class="grid-item dev design other" style="color:#FB1700; font-weight: bold;"><a target="_top" href="mailto:chartaud.romain@gmail.com">Me contacter<img src="images/mail.png" alt"Mail"></img></a></div>
 
-                <a href="images/FairGamepage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/FairGame.png" alt="FairGame"/></a>
+      </div>
+    </div>
+    </section>
 
-                <a href="images/Spinkoppage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/Spinkop.png" alt="Spinkop"/></a>
-
-                <a href="images/gscpage.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s"><img src="images/gsc.png" alt="GSC"/></a>
-        </aside>
         <!--End of Gallery-->
 
 
@@ -182,6 +195,34 @@ $(document).scroll(function() {
 <!-- Include JavaScript resources -->
 <script src="js/jquery.1.8.3.min.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script>
+      var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+          name: function (element) {
+            return $(element).text();
+          }
+        }
+      });
+      $('.filter button').on("click", function () {
+        var value = $(this).attr('data-name');
+          $grid.isotope({
+            filter: value
+          });
+        $('.filter button').removeClass('active');
+        $(this).addClass('active');
+      })
+      $('.sort button').on("click", function () {
+        var value = $(this).attr('data-name');
+        $grid.isotope({
+          sortBy: value
+        });
+        $('.sort button').removeClass('active');
+        $(this).addClass('active');
+      })
+    </script>
 <script src="js/featherlight.min.js"></script>
 <script src="js/featherlight.gallery.min.js"></script>
 <script src="js/jquery.enllax.min.js"></script>
