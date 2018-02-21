@@ -2508,15 +2508,10 @@ hr {
   -webkit-transition: background-position 0.5s ease-out;
     border: none;
     cursor: pointer;
+    height: 9px;
 }
 
 .container button:hover {
     font-weight: bold;
-    color: white;
     background-position: -100% 0;
-
-}
-
-.container button:focus {
-    text-decoration: underline #000;
 }
