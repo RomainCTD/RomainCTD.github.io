@@ -2407,8 +2407,6 @@ blockquote {
     font-weight: bold;
     letter-spacing: 4px;
     cursor: pointer;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     box-shadow: 0px 1px;
 }
 
@@ -2416,16 +2414,6 @@ blockquote {
     animation: none !important;
     color: #000 !important;
     background-color: #FE0000 !important;
-}
-
-@media screen and (max-width: 780px) {
-    #gallery img {
-        max-height: 120px;
-    }
-    #gallery a {
-        width: 33.33%
-    }
-
 }
 
 hr {
@@ -2454,12 +2442,6 @@ hr {
     margin-right: auto;
 }
 
-@media screen and (max-width: 900px) {
-    .container {
-        width: 100%;
-    }
-}
-
 .grid-item {
         width: 220px;
         height: 288px;
@@ -2483,6 +2465,18 @@ hr {
     margin-bottom: 100px;
 }
 
+@media screen and (max-width: 900px) {
+    .container {
+        width: 100%;
+    }
+    .grid-item {
+        margin: 0px 0px 0px 50px;
+        width: 120px;
+        height: 188px;
+        margin-bottom: 0px;
+    }
+}
+
 
 .grid-item img {
     margin-top: 20px;
@@ -2491,13 +2485,38 @@ hr {
     max-height: 278px !important;
 }
 
+@media screen and (max-width: 656px) {
+    .container {
+        margin-top: 50px;
+    }
+    .grid-item {
+        margin-top: 0px;
+    }
+    .grid-item img {
+        width: 100px
+    }
+}
+
 .container button {
+    background-color: #FFF;
+    background-size: 200% auto;
+    -webkit-background-size: 200% auto;
+  -moz-background-size: 200% auto;
+  background-position: -0% 0;
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #FB1700 50%);
+  transition: background-position 0.5s ease-out;
+  -webkit-transition: background-position 0.5s ease-out;
     border: none;
-    background-color: white;
     cursor: pointer;
 }
 
 .container button:hover {
-    text-decoration: line-through red;
+    font-weight: bold;
+    color: white;
+    background-position: -100% 0;
 
+}
+
+.container button:focus {
+    text-decoration: underline #000;
 }
