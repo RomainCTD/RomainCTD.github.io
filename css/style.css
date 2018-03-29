@@ -2508,10 +2508,21 @@ hr {
   -webkit-transition: background-position 0.5s ease-out;
     border: none;
     cursor: pointer;
-    height: 9px;
+    padding-top: 2px
+    height: 1px;
 }
 
 .container button:hover {
     font-weight: bold;
     background-position: -100% 0;
+}
+
+/* extension images */
+
+.imgext {
+    display: block;
+}
+
+a:hover .imgext {
+    display: block;
 }
